@@ -10,7 +10,7 @@ SpotifySkip lets you enable tablet-only Spotify freemium features on mobile devi
 
 ## Credits
 
-- <a href="http://forum.xda-developers.com/member.php?u=6799056">stirante</a> for helping rewrite the whole module.
+- <a href="http://forum.xda-developers.com/member.php?u=6799056">Piotr 'stirante' Brzozowski</a> for helping rewrite the whole module.
 - <a href="http://forum.xda-developers.com/member.php?u=618483">Thunder07</a> for the original idea.
 
 ## License
