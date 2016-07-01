@@ -15,7 +15,7 @@ SpotifySkip lets you enable tablet-only Spotify freemium features on mobile devi
 
 ## License
 
-The whole project is licensed under the GNU GPLv3, which can be found in the LICENSE file.
+The whole project is licensed under the GNU GPLv2, which can be found in the LICENSE file.
 
 Copyright (C) 2016 Jani Andsten & Piotr Brzozowski
 
