@@ -54,7 +54,7 @@ public class Main implements IXposedHookLoadPackage, IXposedHookInitPackageResou
                     if (flag.equalsIgnoreCase("ads") || flag.equalsIgnoreCase("shuffle_restricted")) {
                         param.setResult(false);
                     }
-                    if (flag.equalsIgnoreCase("on-demand")/* || flag.equalsIgnoreCase("high-bitrate")*/){
+                    if (flag.equalsIgnoreCase("on-demand")){
                         param.setResult(true);
                     }
                 }
