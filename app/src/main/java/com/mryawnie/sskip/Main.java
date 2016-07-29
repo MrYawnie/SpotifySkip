@@ -9,6 +9,7 @@ import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_InitPackageResources;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
+import de.robv.android.xposed.callbacks.XCallback;
 
 /**
  * Created by MrYawnie on 30.6.2016.
@@ -25,11 +26,12 @@ public class Main implements IXposedHookLoadPackage, IXposedHookInitPackageResou
 
     }
 
-    public void handleLoadPackage(final XC_LoadPackage.LoadPackageParam packageParam) throws Throwable {
+    public void handleLoadPackage(final XC_LoadPackage.LoadPackageParam packageParam ) throws Throwable {
         if (packageParam.packageName.equalsIgnoreCase("com.spotify.music")) {
             XposedBridge.log("We are in Spotify!");
             //find LoadedFlags class
-            Class<?> loadedFlagsCls = XposedHelpers.findClass("com.spotify.mobile.android.service.feature.LoadedFlags", packageParam.classLoader);
+            //Class<?> loadedFlagsCls = XposedHelpers.findClass("com.spotify.mobile.android.service.feature.LoadedFlags", packageParam.classLoader); //versions <= 5.8
+            Class<?> loadedFlagsCls = XposedHelpers.findClass("com.spotify.android.flags.LoadedFlags", packageParam.classLoader); // versions => 5.9
             //iterate through all methods to find our flag class
             Class<?> flagCls = null;
             for (Method m : loadedFlagsCls.getMethods()) {
@@ -49,8 +51,11 @@ public class Main implements IXposedHookLoadPackage, IXposedHookInitPackageResou
                     //get flag name
                     String flag = (String) XposedHelpers.getObjectField(param.args[0], "b");
                     //disable chosen flags
-                    if (flag.equalsIgnoreCase("ads") || flag.equalsIgnoreCase("on-demand") || flag.equalsIgnoreCase("shuffle_restricted")) {
+                    if (flag.equalsIgnoreCase("ads") || flag.equalsIgnoreCase("shuffle_restricted")) {
                         param.setResult(false);
+                    }
+                    if (flag.equalsIgnoreCase("on-demand")/* || flag.equalsIgnoreCase("high-bitrate")*/){
+                        param.setResult(true);
                     }
                 }
             });
