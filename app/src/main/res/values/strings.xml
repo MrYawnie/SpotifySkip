@@ -2,8 +2,8 @@
     <string name="app_name">SpotifySkip</string>
     <string name="version_list_title"><b>Welcome to use SpotifySkip.</b></string>
     <string name="version_list">Whole module has been rewritten to support all latest Spotify versions. No more hard-coded version support. This means the module should survive Spotify updates, unless code changes considerably.</string>
-    <string name="feature_list"><b>Features:</b>\n- Unlimited skips\n- On-demand songs\n- Disable shuffle\n- No ads</string>
-    <string name="tested_versions"><b>Tested on Spotify versions:</b>\n- Spotify 5.4.0.858\n- Spotify 5.5.0.653\n- Spotify 5.6.0.674 beta\n- Spotify 5.6.0.701\n- Spotify 5.7.0.746 beta</string>
+    <string name="feature_list"><b>Features:</b>\n- Unlimited skips\n- On-demand songs\n- Disable shuffle</string>
+    <string name="tested_versions"><b>Tested on Spotify versions:</b>\n- Spotify 5.9.0.755 beta\n- Spotify 5.9.0.771 beta\n- Spotify 5.9.0.774</string>
     <string name="credits">Originally based on <b>Thunder07</b>\'s SpotifySkip</string>
     <string name="credits2">Special thanks to <b>stirante</b> for helping rewrite the module.</string>
     <string name="thanks">Special thanks to <b>stirante</b> for helping with the completely rewritten code.</string>
