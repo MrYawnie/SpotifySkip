@@ -6,7 +6,6 @@ SpotifySkip lets you enable tablet-only Spotify freemium features on mobile devi
 - Unlimited skips
 - On-demand songs
 - Disable shuffle mode
-- No ads
 
 ## Credits
 
