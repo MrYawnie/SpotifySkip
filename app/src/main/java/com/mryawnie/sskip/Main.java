@@ -49,7 +49,7 @@ public class Main implements IXposedHookLoadPackage, IXposedHookInitPackageResou
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                     //get flag name
-                    String flag = (String) XposedHelpers.getObjectField(param.args[0], "b");
+                    String flag = (String) XposedHelpers.getObjectField(param.args[0], "a");
                     //disable chosen flags
                     if (flag.equalsIgnoreCase("ads") || flag.equalsIgnoreCase("shuffle_restricted")) {
                         param.setResult(false);
